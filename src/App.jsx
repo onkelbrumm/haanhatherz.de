@@ -70,7 +70,7 @@ function App() {
         <section className="hero">
           <img src={logo} alt="" className="hero-logo" aria-hidden="true" />
           <p className="eyebrow">Eine Aktion des Haaner Einzelhandels</p>
-          <h1>Gemeinschaft gestärkt.</h1>
+          <h1>Gemeinschaft stärken.</h1>
           <p className="hero-text">
             Am Black Friday 2025 haben teilnehmende Geschäfte aus Haan einen
             Teil ihres Umsatzes an lokale Initiativen gespendet – ein Zeichen
