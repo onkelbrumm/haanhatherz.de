@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import logo from './assets/HHH-Herz-Logo-2026.png'
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -29,13 +30,22 @@ function App() {
         padding: '64px 24px',
       }}
     >
+      <img
+        src={logo}
+        alt="haanhatherz.de Logo"
+        style={{
+          width: '160px',
+          height: 'auto',
+        }}
+      />
+
       <h1
         style={{
           fontFamily:
             '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
           fontSize: '2.5rem',
           color: '#111',
-          margin: 0,
+          margin: '24px 0 0',
           textAlign: 'center',
         }}
       >
