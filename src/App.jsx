@@ -1,4 +1,4 @@
-import logo from './assets/HHH-Herz-Logo-2026.png'
+import logo from './assets/HHH-Herz-Logo-2026_02.png'
 
 function App() {
   return (
