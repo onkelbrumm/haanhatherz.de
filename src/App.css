@@ -236,14 +236,15 @@
   background: var(--white);
   border: 1px solid var(--red-tint);
   border-radius: 24px;
-  padding: 48px;
+  padding: 20px;
   box-shadow: 0 20px 40px rgba(226, 2, 1, 0.08);
 }
 
 .about-visual img {
   width: 100%;
-  max-width: 220px;
+  max-width: 300px;
   height: auto;
+  border-radius: 12px;
 }
 
 .about-text {

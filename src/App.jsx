@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo from './assets/HHH-Herz-Logo-2026_02.png'
+import campaignPoster from './assets/haan-hat-herz-2025.png'
 import './App.css'
 
 const NAV_LINKS = [
@@ -98,8 +99,8 @@ function App() {
         </section>
 
         <section id="initiativen" className="about">
-          <div className="about-visual" aria-hidden="true">
-            <img src={logo} alt="" />
+          <div className="about-visual">
+            <img src={campaignPoster} alt="Plakat der Aktion Haan hat Herz 2025" />
           </div>
           <div className="about-text">
             <h2>Wer profitiert hat</h2>
