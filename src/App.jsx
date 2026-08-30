@@ -10,8 +10,8 @@ const NAV_LINKS = [
 
 const STEPS = [
   {
-    title: 'Black Friday',
-    text: 'Teilnehmende Geschäfte aus Haan spenden einen individuellen Prozentsatz ihres Tagesumsatzes oder des Umsatzes ausgewählter Artikel.',
+    title: 'Black Friday 2025',
+    text: 'Teilnehmende Geschäfte aus Haan haben einen individuellen Prozentsatz ihres Tagesumsatzes oder des Umsatzes ausgewählter Artikel gespendet.',
   },
   {
     title: 'Bewusster Konsum',
@@ -19,18 +19,18 @@ const STEPS = [
   },
   {
     title: 'Rund 15 Geschäfte',
-    text: 'Seit 2025 machen zahlreiche Haaner Einzelhändlerinnen und Einzelhändler bei der Aktion mit.',
+    text: '2025 haben rund 15 Haaner Einzelhändlerinnen und Einzelhändler bei der Aktion mitgemacht.',
   },
 ]
 
 const INITIATIVES = [
   {
     title: 'Förderkreis Kipkel e.V.',
-    text: 'Die Hälfte der gesammelten Spenden geht an den Förderkreis Kipkel e.V.',
+    text: 'Die Hälfte der gesammelten Spenden ging an den Förderkreis Kipkel e.V.',
   },
   {
     title: 'Bürgerstiftung für Haan & Gruiten',
-    text: 'Die andere Hälfte kommt der Bürgerstiftung für Haan & Gruiten zugute.',
+    text: 'Die andere Hälfte kam der Bürgerstiftung für Haan & Gruiten zugute.',
   },
 ]
 
@@ -69,11 +69,15 @@ function App() {
         <section className="hero">
           <img src={logo} alt="" className="hero-logo" aria-hidden="true" />
           <p className="eyebrow">Eine Aktion des Haaner Einzelhandels</p>
-          <h1>Gemeinschaft stärken.</h1>
+          <h1>Gemeinschaft gestärkt.</h1>
           <p className="hero-text">
-            Am Black Friday spenden teilnehmende Geschäfte aus Haan einen Teil
-            ihres Umsatzes an lokale Initiativen – ein Zeichen für bewussten
-            Konsum statt großer Rabattschlachten.
+            Am Black Friday 2025 haben teilnehmende Geschäfte aus Haan einen
+            Teil ihres Umsatzes an lokale Initiativen gespendet – ein Zeichen
+            für bewussten Konsum statt großer Rabattschlachten.
+          </p>
+          <p className="hero-note">
+            🎉 Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
+            27. November 2026.
           </p>
           <a href="#kontakt" className="button">
             Kontakt aufnehmen
@@ -81,7 +85,7 @@ function App() {
         </section>
 
         <section id="aktion" className="services">
-          <h2>Die Aktion</h2>
+          <h2>Die Aktion 2025</h2>
           <div className="services-grid">
             {STEPS.map((step) => (
               <div key={step.title} className="service-card">
@@ -98,10 +102,10 @@ function App() {
             <img src={logo} alt="" />
           </div>
           <div className="about-text">
-            <h2>Wer profitiert</h2>
+            <h2>Wer profitiert hat</h2>
             <p>
-              Die Spendengelder aus der Aktion werden zu gleichen Teilen an zwei
-              Haaner Initiativen verteilt.
+              Die Spendengelder aus der Aktion 2025 wurden zu gleichen Teilen
+              an zwei Haaner Initiativen verteilt.
             </p>
             <ul className="initiative-list">
               {INITIATIVES.map((initiative) => (

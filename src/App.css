@@ -133,10 +133,19 @@
 }
 
 .hero-text {
-  margin: 24px 0 32px;
+  margin: 24px 0 0;
   max-width: 46ch;
   font-size: 18px;
   opacity: 0.92;
+}
+
+.hero-note {
+  margin: 20px 0 32px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .button {
