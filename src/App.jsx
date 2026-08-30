@@ -117,22 +117,24 @@ function App() {
         <section id="kontakt" className="contact">
           <h2>Kontakt</h2>
           <p>
-            Ansprechpartnerin bei der Stadt Haan: <strong>Frau Schwabe</strong>
+            Initiatorin und Ansprechpartnerin: <strong>Sofia Tschrepp</strong> –
+            Dolce Cuore, Haan
           </p>
           <div className="contact-details">
-            <a href="tel:+492129911241">+49 (2129) 911 – 241</a>
-            <a href="mailto:wirtschaftsfoerderung@stadt-haan.de">
-              wirtschaftsfoerderung@stadt-haan.de
+            <a href="tel:+4921295668668">02129 5668668</a>
+            <a href="mailto:sofy@dolcecuore.de">sofy@dolcecuore.de</a>
+            <a href="https://dolcecuore.de" target="_blank" rel="noreferrer">
+              dolcecuore.de
             </a>
-            <a href="mailto:kultur@stadt-haan.de">kultur@stadt-haan.de</a>
             <a
-              href="https://www.instagram.com/haanhatherz"
+              href="https://www.instagram.com/dolcecuore_haan"
               target="_blank"
               rel="noreferrer"
             >
-              @haanhatherz auf Instagram
+              @dolcecuore_haan
             </a>
           </div>
+          <p className="contact-address">Kaiserstraße 59 · 42781 Haan</p>
         </section>
       </main>
 
