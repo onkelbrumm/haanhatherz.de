@@ -132,11 +132,11 @@ function App() {
               dolcecuore.de
             </a>
             <a
-              href="https://www.instagram.com/dolcecuore_haan"
+              href="https://www.instagram.com/haanhatherz"
               target="_blank"
               rel="noreferrer"
             >
-              @dolcecuore_haan
+              @haanhatherz
             </a>
           </div>
           <p className="contact-address">Kaiserstraße 59 · 42781 Haan</p>
