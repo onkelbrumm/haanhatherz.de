@@ -22,6 +22,18 @@ function App() {
           height: '48px',
         }}
       />
+      <h1
+        style={{
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+          fontSize: '2.5rem',
+          color: '#111',
+          margin: 0,
+          textAlign: 'center',
+        }}
+      >
+        haanhatherz.de
+      </h1>
     </div>
   )
 }
