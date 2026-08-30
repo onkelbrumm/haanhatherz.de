@@ -128,9 +128,6 @@ function App() {
           <div className="contact-details">
             <a href="tel:+4921295668668">02129 5668668</a>
             <a href="mailto:sofy@dolcecuore.de">sofy@dolcecuore.de</a>
-            <a href="https://dolcecuore.de" target="_blank" rel="noreferrer">
-              dolcecuore.de
-            </a>
             <a
               href="https://www.instagram.com/haanhatherz"
               target="_blank"
