@@ -43,7 +43,7 @@ function App() {
       <header className="site-header">
         <a href="#top" className="brand">
           <img src={logo} alt="haanhatherz.de Logo" className="brand-logo" />
-          <span>haanhatherz.de</span>
+          <span>Haan hat Herz</span>
         </a>
 
         <button
