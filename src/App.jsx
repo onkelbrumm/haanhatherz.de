@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import logo from './assets/HHH-Herz-Logo-2026_02.png'
 import campaignPoster from './assets/haan-hat-herz-2025.png'
+import kipkelLogo from './assets/kipkel-logo.png'
+import buergerstiftungLogo from './assets/buergerstiftung-logo.png'
 import './App.css'
 
 const NAV_LINKS = [
@@ -28,10 +30,12 @@ const INITIATIVES = [
   {
     title: 'Förderkreis Kipkel e.V.',
     text: 'Die Hälfte der gesammelten Spenden ging an den Förderkreis Kipkel e.V.',
+    logo: kipkelLogo,
   },
   {
     title: 'Bürgerstiftung für Haan & Gruiten',
     text: 'Die andere Hälfte kam der Bürgerstiftung für Haan & Gruiten zugute.',
+    logo: buergerstiftungLogo,
   },
 ]
 
@@ -111,8 +115,15 @@ function App() {
             <ul className="initiative-list">
               {INITIATIVES.map((initiative) => (
                 <li key={initiative.title}>
-                  <strong>{initiative.title}</strong>
-                  <span>{initiative.text}</span>
+                  <img
+                    src={initiative.logo}
+                    alt={initiative.title}
+                    className="initiative-logo"
+                  />
+                  <div>
+                    <strong>{initiative.title}</strong>
+                    <span>{initiative.text}</span>
+                  </div>
                 </li>
               ))}
             </ul>

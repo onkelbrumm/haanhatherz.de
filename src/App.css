@@ -276,11 +276,27 @@
 
 .initiative-list li {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 16px;
   padding: 16px 20px;
   border-radius: 12px;
   background: var(--red-tint);
+}
+
+.initiative-list li > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.initiative-logo {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 8px;
 }
 
 .initiative-list strong {
