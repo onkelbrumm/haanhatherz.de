@@ -277,10 +277,8 @@
 .initiative-list li {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  background: var(--red-tint);
+  gap: 20px;
+  padding: 12px 0;
 }
 
 .initiative-list li > div {
@@ -291,12 +289,10 @@
 
 .initiative-logo {
   flex: 0 0 auto;
-  width: 72px;
-  height: 72px;
+  width: 140px;
+  height: 100px;
   object-fit: contain;
-  background: var(--white);
-  border-radius: 10px;
-  padding: 8px;
+  object-position: left center;
 }
 
 .initiative-list strong {
