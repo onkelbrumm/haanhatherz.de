@@ -3,6 +3,8 @@ import logo from './assets/HHH-Herz-Logo-2026_02.png'
 import campaignPoster from './assets/haan-hat-herz-2025.png'
 import kipkelLogo from './assets/kipkel-logo.png'
 import buergerstiftungLogo from './assets/buergerstiftung-logo.png'
+import dolceCuoreLogo from './assets/dolcecuore-logo.svg'
+import gartenstadtHaanLogo from './assets/gartenstadt-haan-logo.png'
 import './App.css'
 
 const participantModules = import.meta.glob('./assets/participants/*.png', {
@@ -116,6 +118,11 @@ function App() {
           <p className="join-cta">Wer mitmachen möchte, meldet sich bei:</p>
           <div className="join-grid">
             <div className="join-card">
+              <img
+                src={dolceCuoreLogo}
+                alt="Dolce Cuore Logo"
+                className="join-card-logo"
+              />
               <h3>Dolce Cuore</h3>
               <p>Sofia Tschrepp</p>
               <div className="contact-details">
@@ -124,6 +131,11 @@ function App() {
               </div>
             </div>
             <div className="join-card">
+              <img
+                src={gartenstadtHaanLogo}
+                alt="Gartenstadt Haan Logo"
+                className="join-card-logo"
+              />
               <h3>Wirtschaftsförderung Haan</h3>
               <p>
                 Amt für Wirtschaftsförderung, Tourismus, Kultur und
