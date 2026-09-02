@@ -108,9 +108,9 @@ function App() {
           <p className="eyebrow">Eine Aktion des Haaner Einzelhandels</p>
           <h1>Gemeinschaft stärken.</h1>
           <p className="hero-text">
-            Am Black Friday 2025 haben teilnehmende Geschäfte aus Haan einen
-            Teil ihres Umsatzes an lokale Initiativen gespendet – ein Zeichen
-            für bewussten Konsum statt großer Rabattschlachten.
+            Am Black Friday 2025 haben teilnehmende Geschäfte aus Haan und
+            Gruiten einen Teil ihres Umsatzes an lokale Initiativen gespendet
+            – ein Zeichen für bewussten Konsum statt großer Rabattschlachten.
           </p>
           <p className="hero-note">
             🎉 Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
