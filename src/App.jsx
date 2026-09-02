@@ -22,9 +22,8 @@ const PARTICIPANTS = Object.entries(participantModules)
   .sort((a, b) => a.name.localeCompare(b.name))
 
 const NAV_LINKS = [
-  { href: '#aktion', label: 'Die Aktion' },
-  { href: '#geschaefte', label: 'Geschäfte' },
-  { href: '#initiativen', label: 'Initiativen' },
+  { href: '#2026', label: '2026' },
+  { href: '#2025', label: '2025' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
 
@@ -101,26 +100,62 @@ function App() {
             🎉 Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
             27. November 2026.
           </p>
-          <a href="#kontakt" className="button">
-            Kontakt aufnehmen
+          <a href="#2026" className="button">
+            Für 2026 anmelden
           </a>
         </section>
 
-        <section id="aktion" className="services">
-          <h2>Die Aktion 2025</h2>
+        <section id="2026" className="join">
+          <h2>Black Friday 2026</h2>
+          <p className="join-intro">
+            Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
+            27. November 2026. Geschäfte aus Haan, die mitmachen möchten,
+            sind herzlich eingeladen. Wohin die Spenden 2026 gehen, steht
+            noch nicht fest.
+          </p>
+          <p className="join-cta">Wer mitmachen möchte, meldet sich bei:</p>
+          <div className="join-grid">
+            <div className="join-card">
+              <h3>Dolce Cuore</h3>
+              <p>Sofia Tschrepp</p>
+              <div className="contact-details">
+                <a href="tel:+4921295668668">02129 5668668</a>
+                <a href="mailto:sofy@dolcecuore.de">sofy@dolcecuore.de</a>
+              </div>
+            </div>
+            <div className="join-card">
+              <h3>Wirtschaftsförderung Haan</h3>
+              <p>
+                Amt für Wirtschaftsförderung, Tourismus, Kultur und
+                Stadtmarketing – Frau Schwabe
+              </p>
+              <p className="join-card-address">Kaiserstraße 85 · 42781 Haan</p>
+              <div className="contact-details">
+                <a href="mailto:wirtschaftsfoerderung@stadt-haan.de">
+                  wirtschaftsfoerderung@stadt-haan.de
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="section-divider" />
+
+        <section id="2025" className="year-2025">
+          <h2>Haan hat Herz 2025</h2>
+
+          <h3 className="year-2025-subheading">Die Aktion</h3>
           <div className="services-grid">
             {STEPS.map((step) => (
               <div key={step.title} className="service-card">
                 <span className="service-mark" aria-hidden="true" />
-                <h3>{step.title}</h3>
+                <h4>{step.title}</h4>
                 <p>{step.text}</p>
               </div>
             ))}
           </div>
-        </section>
 
-        <section id="geschaefte" className="participants">
-          <h2>Die teilnehmenden Geschäfte</h2>
+          <h3 className="year-2025-subheading">Die teilnehmenden Geschäfte</h3>
           <p className="participants-intro">
             Diese Haaner Geschäfte haben 2025 bei Haan hat Herz mitgemacht.
           </p>
@@ -131,33 +166,33 @@ function App() {
               </div>
             ))}
           </div>
-        </section>
 
-        <section id="initiativen" className="about">
-          <div className="about-visual">
-            <img src={campaignPoster} alt="Plakat der Aktion Haan hat Herz 2025" />
-          </div>
-          <div className="about-text">
-            <h2>Wer profitiert hat</h2>
-            <p>
-              Die Spendengelder aus der Aktion 2025 wurden zu gleichen Teilen
-              an zwei Haaner Initiativen verteilt.
-            </p>
-            <ul className="initiative-list">
-              {INITIATIVES.map((initiative) => (
-                <li key={initiative.title}>
-                  <img
-                    src={initiative.logo}
-                    alt={initiative.title}
-                    className="initiative-logo"
-                  />
-                  <div>
-                    <strong>{initiative.title}</strong>
-                    <span>{initiative.text}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <h3 className="year-2025-subheading">Wer profitiert hat</h3>
+          <div className="about">
+            <div className="about-visual">
+              <img src={campaignPoster} alt="Plakat der Aktion Haan hat Herz 2025" />
+            </div>
+            <div className="about-text">
+              <p>
+                Die Spendengelder aus der Aktion 2025 wurden zu gleichen
+                Teilen an zwei Haaner Initiativen verteilt.
+              </p>
+              <ul className="initiative-list">
+                {INITIATIVES.map((initiative) => (
+                  <li key={initiative.title}>
+                    <img
+                      src={initiative.logo}
+                      alt={initiative.title}
+                      className="initiative-logo"
+                    />
+                    <div>
+                      <strong>{initiative.title}</strong>
+                      <span>{initiative.text}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
