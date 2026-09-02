@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import logo from './assets/HHH-Herz-Logo-2026_02.png'
+import logoBadge from './assets/haan-hat-herz-badge.png'
 import campaignPoster from './assets/haan-hat-herz-2025.png'
 import kipkelLogo from './assets/kipkel-logo.png'
 import buergerstiftungLogo from './assets/buergerstiftung-logo.png'
@@ -104,7 +105,11 @@ function App() {
 
       <main id="top">
         <section className="hero">
-          <img src={logo} alt="" className="hero-logo" aria-hidden="true" />
+          <img
+            src={logoBadge}
+            alt="Haan hat Herz – eine Charity Initiative zum Black Friday"
+            className="hero-logo"
+          />
           <p className="eyebrow">Eine Aktion des Haaner Einzelhandels</p>
           <h1>Gemeinschaft stärken.</h1>
           <p className="hero-text">
