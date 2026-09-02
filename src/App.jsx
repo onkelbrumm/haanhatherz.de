@@ -124,6 +124,7 @@ function App() {
                 className="join-card-logo"
               />
               <p>Sofia Tschrepp</p>
+              <p className="join-card-address">Kaiserstraße 59 · 42781 Haan</p>
               <div className="contact-details">
                 <a href="tel:+4921295668668">02129 5668668</a>
                 <a href="mailto:sofy@dolcecuore.de">sofy@dolcecuore.de</a>
