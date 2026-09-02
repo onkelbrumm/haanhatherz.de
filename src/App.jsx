@@ -125,9 +125,9 @@ function App() {
           <h2>Black Friday 2026</h2>
           <p className="join-intro">
             Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
-            27. November 2026. Geschäfte aus Haan, die mitmachen möchten,
-            sind herzlich eingeladen. Wohin die Spenden 2026 gehen, steht
-            noch nicht fest.
+            27. November 2026. Geschäfte aus Haan und Gruiten, die
+            mitmachen möchten, sind herzlich eingeladen. Wohin die Spenden
+            2026 gehen, steht noch nicht fest.
           </p>
           <p className="join-cta">Wer mitmachen möchte, meldet sich bei:</p>
           <div className="join-grid">
