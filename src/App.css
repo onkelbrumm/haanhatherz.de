@@ -209,7 +209,8 @@
 .join-card {
   padding: 32px;
   border-radius: 16px;
-  background: var(--red-tint);
+  background: var(--white);
+  border: 1px solid var(--red);
 }
 
 .join-card-logo {
@@ -222,9 +223,9 @@
   margin-bottom: 20px;
 }
 
-.join-card h3 {
-  font-size: 26px;
-  margin-bottom: 8px;
+.join-card-logo--large {
+  height: 96px;
+  max-width: 360px;
 }
 
 .join-card p {
@@ -244,7 +245,7 @@
 
 .join-card .contact-details a {
   color: var(--black);
-  background: var(--white);
+  background: var(--red-tint);
 }
 
 .join-card .contact-details a:hover {

@@ -123,7 +123,6 @@ function App() {
                 alt="Dolce Cuore Logo"
                 className="join-card-logo"
               />
-              <h3>Dolce Cuore</h3>
               <p>Sofia Tschrepp</p>
               <div className="contact-details">
                 <a href="tel:+4921295668668">02129 5668668</a>
@@ -134,9 +133,8 @@ function App() {
               <img
                 src={gartenstadtHaanLogo}
                 alt="Gartenstadt Haan Logo"
-                className="join-card-logo"
+                className="join-card-logo join-card-logo--large"
               />
-              <h3>Wirtschaftsförderung Haan</h3>
               <p>
                 Amt für Wirtschaftsförderung, Tourismus, Kultur und
                 Stadtmarketing – Frau Schwabe
