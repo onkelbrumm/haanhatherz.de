@@ -5,8 +5,25 @@ import kipkelLogo from './assets/kipkel-logo.png'
 import buergerstiftungLogo from './assets/buergerstiftung-logo.png'
 import './App.css'
 
+const participantModules = import.meta.glob('./assets/participants/*.png', {
+  eager: true,
+  import: 'default',
+})
+
+const PARTICIPANTS = Object.entries(participantModules)
+  .map(([path, src]) => {
+    const fileName = path.split('/').pop().replace('.png', '')
+    const name = fileName
+      .split('_')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+    return { name, src }
+  })
+  .sort((a, b) => a.name.localeCompare(b.name))
+
 const NAV_LINKS = [
   { href: '#aktion', label: 'Die Aktion' },
+  { href: '#geschaefte', label: 'Geschäfte' },
   { href: '#initiativen', label: 'Initiativen' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
@@ -97,6 +114,20 @@ function App() {
                 <span className="service-mark" aria-hidden="true" />
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="geschaefte" className="participants">
+          <h2>Die teilnehmenden Geschäfte</h2>
+          <p className="participants-intro">
+            Diese Haaner Geschäfte haben 2025 bei Haan hat Herz mitgemacht.
+          </p>
+          <div className="participants-grid">
+            {PARTICIPANTS.map((participant) => (
+              <div key={participant.name} className="participant-card">
+                <img src={participant.src} alt={participant.name} />
               </div>
             ))}
           </div>
