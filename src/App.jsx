@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from './assets/HHH-Herz-Logo-2026_02.png'
 import campaignPoster from './assets/haan-hat-herz-2025.png'
 import kipkelLogo from './assets/kipkel-logo.png'
@@ -57,8 +57,22 @@ const INITIATIVES = [
   },
 ]
 
+const COOKIE_CONSENT_KEY = 'haanhatherz-cookie-consent'
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showCookieBanner, setShowCookieBanner] = useState(false)
+
+  useEffect(() => {
+    if (!localStorage.getItem(COOKIE_CONSENT_KEY)) {
+      setShowCookieBanner(true)
+    }
+  }, [])
+
+  const acceptCookies = () => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted')
+    setShowCookieBanner(false)
+  }
 
   return (
     <>
@@ -232,6 +246,18 @@ function App() {
         <img src={logo} alt="haanhatherz.de Logo" className="footer-logo" />
         <p>© {new Date().getFullYear()} haanhatherz.de</p>
       </footer>
+
+      {showCookieBanner && (
+        <div className="cookie-banner">
+          <p>
+            Diese Website verwendet nur technisch notwendige Cookies. Es
+            findet kein Tracking statt.
+          </p>
+          <button className="button" onClick={acceptCookies}>
+            Verstanden
+          </button>
+        </div>
+      )}
     </>
   )
 }

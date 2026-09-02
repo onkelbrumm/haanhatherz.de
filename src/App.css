@@ -446,7 +446,7 @@
 .contact {
   text-align: center;
   padding: 96px 24px;
-  background: var(--black);
+  background: var(--charcoal);
   color: var(--white);
 }
 
@@ -510,4 +510,34 @@
   height: 28px;
   width: auto;
   opacity: 0.8;
+}
+
+/* Cookie banner */
+
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--charcoal);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cookie-banner p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  max-width: 60ch;
+  margin: 0;
+}
+
+.cookie-banner .button {
+  flex: 0 0 auto;
+  padding: 12px 28px;
 }
