@@ -224,7 +224,10 @@ function App() {
         <section id="kontakt" className="contact">
           <h2>Kontakt</h2>
           <p>
-            Initiatorin und Ansprechpartnerin: <strong>Sofia Tschrepp</strong> –
+            Initiatorin und Ansprechpartnerin:
+            <br />
+            <strong>Sofia Tschrepp</strong>
+            <br />
             Dolce Cuore, Haan
           </p>
           <div className="contact-details">
