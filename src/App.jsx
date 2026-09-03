@@ -220,7 +220,7 @@ function App() {
               <p className="stat-label">Bisher gespendet</p>
             </div>
             <div className="stat-card">
-              <Counter target={0} />
+              <Counter target={1} />
               <p className="stat-label">Teilnehmende Geschäfte</p>
             </div>
             <div className="stat-card">
