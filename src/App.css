@@ -60,7 +60,7 @@
 }
 
 .site-nav a:hover {
-  color: var(--red-dark);
+  color: var(--red-line);
 }
 
 @media (max-width: 720px) {
@@ -209,7 +209,7 @@
   padding: 32px;
   border-radius: 16px;
   background: var(--white);
-  border: 1px solid var(--red-dark);
+  border: 1px solid var(--red-line);
   text-align: center;
 }
 
@@ -277,7 +277,7 @@
 
 .join .stat-card {
   background: var(--white);
-  border: 1px solid var(--red-dark);
+  border: 1px solid var(--red-line);
 }
 
 .stat-value {
@@ -285,7 +285,7 @@
   font-family: var(--sans);
   font-weight: 700;
   font-size: clamp(24px, 4vw, 36px);
-  color: var(--red-dark);
+  color: var(--red-line);
 }
 
 .stat-label {
@@ -308,7 +308,7 @@
   max-width: 1080px;
   margin: 0 auto 64px;
   border: none;
-  border-top: 1px solid var(--red-dark);
+  border-top: 1px solid var(--red-line);
 }
 
 /* 2025 recap */
@@ -348,7 +348,7 @@
   width: 40px;
   height: 6px;
   border-radius: 3px;
-  background: var(--red-dark);
+  background: var(--red-line);
   margin-bottom: 20px;
 }
 
