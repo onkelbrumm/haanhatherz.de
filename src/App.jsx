@@ -198,7 +198,7 @@ function App() {
           </p>
           <p className="hero-note">
             🎉 Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
-            28. November 2026.
+            27. November 2026.
           </p>
           <a href="#2026" className="button">
             Für 2026 anmelden
@@ -209,7 +209,7 @@ function App() {
           <h2>Black Friday 2026</h2>
           <p className="join-intro">
             Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
-            28. November 2026. Geschäfte aus Haan und Gruiten, die
+            27. November 2026. Geschäfte aus Haan und Gruiten, die
             mitmachen möchten, sind herzlich eingeladen. Wohin die Spenden
             2026 gehen, steht noch nicht fest.
           </p>
@@ -224,7 +224,7 @@ function App() {
               <p className="stat-label">Teilnehmende Geschäfte</p>
             </div>
             <div className="stat-card">
-              <Countdown month={10} day={28} />
+              <Countdown month={10} day={27} />
               <p className="stat-label">Tage bis zum nächsten Black Friday</p>
             </div>
           </div>
