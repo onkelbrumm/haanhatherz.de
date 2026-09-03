@@ -101,7 +101,7 @@
   align-items: center;
   text-align: center;
   padding: 96px 24px 140px;
-  background: linear-gradient(155deg, var(--red) 0%, var(--red-dark) 100%);
+  background: var(--red);
   clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
   color: var(--white);
 }
