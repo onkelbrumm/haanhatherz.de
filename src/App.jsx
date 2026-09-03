@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import logo from './assets/HHH-Herz-Logo-2026_02.png'
 import logoBadge from './assets/haan-hat-herz-badge.png'
 import campaignPoster from './assets/haan-hat-herz-2025.png'
@@ -63,6 +63,82 @@ const INITIATIVES = [
 
 const COOKIE_CONSENT_KEY = 'haanhatherz-cookie-consent'
 
+function Counter({ target, money = false, duration = 1500 }) {
+  const [value, setValue] = useState(0)
+  const spanRef = useRef(null)
+  const animated = useRef(false)
+
+  useEffect(() => {
+    const el = spanRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !animated.current) {
+          animated.current = true
+          const start = performance.now()
+
+          const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1)
+            const eased = 1 - Math.pow(1 - progress, 3)
+            setValue(target * eased)
+            if (progress < 1) {
+              requestAnimationFrame(step)
+            } else {
+              setValue(target)
+            }
+          }
+
+          requestAnimationFrame(step)
+        }
+      },
+      { threshold: 0.4 },
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [target, duration])
+
+  const display = money
+    ? `${value.toLocaleString('de-DE', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      })} €`
+    : Math.round(value).toLocaleString('de-DE')
+
+  return (
+    <span ref={spanRef} className="stat-value">
+      {display}
+    </span>
+  )
+}
+
+function getNextOccurrence(month, day) {
+  const now = new Date()
+  let target = new Date(now.getFullYear(), month, day)
+  target.setHours(0, 0, 0, 0)
+  if (target < now) {
+    target = new Date(now.getFullYear() + 1, month, day)
+  }
+  return target
+}
+
+function daysUntil(month, day) {
+  const target = getNextOccurrence(month, day)
+  return Math.max(0, Math.ceil((target - new Date()) / (1000 * 60 * 60 * 24)))
+}
+
+function Countdown({ month, day }) {
+  const [daysLeft, setDaysLeft] = useState(() => daysUntil(month, day))
+
+  useEffect(() => {
+    const id = setInterval(() => setDaysLeft(daysUntil(month, day)), 1000 * 60 * 60)
+    return () => clearInterval(id)
+  }, [month, day])
+
+  return <span className="stat-value">{daysLeft}</span>
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showCookieBanner, setShowCookieBanner] = useState(false)
@@ -122,7 +198,7 @@ function App() {
           </p>
           <p className="hero-note">
             🎉 Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
-            27. November 2026.
+            28. November 2026.
           </p>
           <a href="#2026" className="button">
             Für 2026 anmelden
@@ -133,10 +209,26 @@ function App() {
           <h2>Black Friday 2026</h2>
           <p className="join-intro">
             Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
-            27. November 2026. Geschäfte aus Haan und Gruiten, die
+            28. November 2026. Geschäfte aus Haan und Gruiten, die
             mitmachen möchten, sind herzlich eingeladen. Wohin die Spenden
             2026 gehen, steht noch nicht fest.
           </p>
+
+          <div className="stats-grid stats-grid--three">
+            <div className="stat-card">
+              <Counter target={0} money />
+              <p className="stat-label">Bisher gespendet</p>
+            </div>
+            <div className="stat-card">
+              <Counter target={0} />
+              <p className="stat-label">Teilnehmende Geschäfte</p>
+            </div>
+            <div className="stat-card">
+              <Countdown month={10} day={28} />
+              <p className="stat-label">Tage bis zum nächsten Black Friday</p>
+            </div>
+          </div>
+
           <p className="join-cta">Wer mitmachen möchte, meldet sich bei:</p>
           <div className="join-grid">
             <div className="join-card">
@@ -176,6 +268,17 @@ function App() {
 
         <section id="2025" className="year-2025">
           <h2>Haan hat Herz 2025</h2>
+
+          <div className="stats-grid">
+            <div className="stat-card">
+              <Counter target={2737} money />
+              <p className="stat-label">Gespendeter Betrag</p>
+            </div>
+            <div className="stat-card">
+              <Counter target={17} />
+              <p className="stat-label">Teilnehmende Geschäfte</p>
+            </div>
+          </div>
 
           <h3 className="year-2025-subheading">Die Aktion</h3>
           <div className="services-grid">
