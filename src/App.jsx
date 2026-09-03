@@ -43,8 +43,8 @@ const STEPS = [
     text: 'Ein Statement gegen übermäßigen Konsum und große Rabattschlachten – für Nachhaltigkeit und Gemeinschaft.',
   },
   {
-    title: 'Rund 15 Geschäfte',
-    text: '2025 haben rund 15 Haaner Einzelhändlerinnen und Einzelhändler bei der Aktion mitgemacht.',
+    title: '17 Geschäfte',
+    text: '2025 haben 17 Haaner Einzelhändlerinnen und Einzelhändler bei der Aktion mitgemacht.',
   },
 ]
 
