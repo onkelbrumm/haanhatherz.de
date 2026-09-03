@@ -60,7 +60,7 @@
 }
 
 .site-nav a:hover {
-  color: var(--red);
+  color: var(--red-dark);
 }
 
 @media (max-width: 720px) {
@@ -101,7 +101,7 @@
   align-items: center;
   text-align: center;
   padding: 96px 24px 140px;
-  background: var(--red);
+  background: linear-gradient(155deg, var(--red) 0%, var(--red-dark) 100%);
   clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
   color: var(--white);
 }
@@ -209,7 +209,7 @@
   padding: 32px;
   border-radius: 16px;
   background: var(--white);
-  border: 1px solid var(--red);
+  border: 1px solid var(--red-dark);
   text-align: center;
 }
 
@@ -277,7 +277,7 @@
 
 .join .stat-card {
   background: var(--white);
-  border: 1px solid var(--red);
+  border: 1px solid var(--red-dark);
 }
 
 .stat-value {
@@ -285,7 +285,7 @@
   font-family: var(--sans);
   font-weight: 700;
   font-size: clamp(24px, 4vw, 36px);
-  color: var(--red);
+  color: var(--red-dark);
 }
 
 .stat-label {
@@ -308,7 +308,7 @@
   max-width: 1080px;
   margin: 0 auto 64px;
   border: none;
-  border-top: 1px solid var(--red);
+  border-top: 1px solid var(--red-dark);
 }
 
 /* 2025 recap */
@@ -348,7 +348,7 @@
   width: 40px;
   height: 6px;
   border-radius: 3px;
-  background: var(--red);
+  background: var(--red-dark);
   margin-bottom: 20px;
 }
 
