@@ -8,14 +8,17 @@ import dolceCuoreLogo from './assets/dolcecuore-logo.svg'
 import gartenstadtHaanLogo from './assets/gartenstadt-haan-logo.png'
 import './App.css'
 
-const participantModules = import.meta.glob('./assets/participants/*.png', {
-  eager: true,
-  import: 'default',
-})
+const participantModules = import.meta.glob(
+  './assets/participants/*.{png,svg}',
+  {
+    eager: true,
+    import: 'default',
+  },
+)
 
 const PARTICIPANTS = Object.entries(participantModules)
   .map(([path, src]) => {
-    const fileName = path.split('/').pop().replace('.png', '')
+    const fileName = path.split('/').pop().replace(/\.(png|svg)$/, '')
     const name = fileName
       .split('_')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
