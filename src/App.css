@@ -395,15 +395,34 @@
   object-fit: contain;
 }
 
+.participants-grid--current {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.participants-grid--current .participant-card {
+  flex: 0 0 calc((100% - 4 * 20px) / 5);
+}
+
 @media (max-width: 860px) {
   .participants-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .participants-grid--current .participant-card {
+    flex-basis: calc((100% - 2 * 20px) / 3);
   }
 }
 
 @media (max-width: 520px) {
   .participants-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .participants-grid--current .participant-card {
+    flex-basis: calc((100% - 20px) / 2);
   }
 }
 

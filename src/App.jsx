@@ -27,6 +27,10 @@ const PARTICIPANTS = Object.entries(participantModules)
   })
   .sort((a, b) => a.name.localeCompare(b.name))
 
+const PARTICIPANTS_2026 = PARTICIPANTS.filter((participant) =>
+  ['4hoki', 'Dolce Cuore'].includes(participant.name),
+)
+
 const NAV_LINKS = [
   { href: '#2026', label: '2026' },
   { href: '#2025', label: '2025' },
@@ -220,13 +224,25 @@ function App() {
               <p className="stat-label">Bisher gespendet</p>
             </div>
             <div className="stat-card">
-              <Counter target={1} />
+              <Counter target={PARTICIPANTS_2026.length} />
               <p className="stat-label">Teilnehmende Geschäfte</p>
             </div>
             <div className="stat-card">
               <Countdown month={10} day={27} />
               <p className="stat-label">Tage bis zum nächsten Black Friday</p>
             </div>
+          </div>
+
+          <h3 className="year-2025-subheading">Die teilnehmenden Geschäfte</h3>
+          <p className="participants-intro">
+            Diese Geschäfte sind 2026 bereits dabei.
+          </p>
+          <div className="participants-grid participants-grid--current">
+            {PARTICIPANTS_2026.map((participant) => (
+              <div key={participant.name} className="participant-card">
+                <img src={participant.src} alt={participant.name} />
+              </div>
+            ))}
           </div>
 
           <p className="join-cta">Wer mitmachen möchte, meldet sich bei:</p>
