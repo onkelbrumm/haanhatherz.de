@@ -5,6 +5,7 @@ import campaignPoster from './assets/haan-hat-herz-2025.png'
 import kipkelLogo from './assets/kipkel-logo.png'
 import buergerstiftungLogo from './assets/buergerstiftung-logo.png'
 import dolceCuoreLogo from './assets/dolcecuore-logo.svg'
+import duIchWirLogo from './assets/du-ich-wir-logo.png'
 import gartenstadtHaanLogo from './assets/gartenstadt-haan-logo.png'
 import './App.css'
 
@@ -225,8 +226,8 @@ function App() {
           <p className="join-intro">
             Auch 2026 ist Haan hat Herz wieder dabei – am Black Friday,
             27. November 2026. Geschäfte aus Haan und Gruiten, die
-            mitmachen möchten, sind herzlich eingeladen. Wohin die Spenden
-            2026 gehen, steht noch nicht fest.
+            mitmachen möchten, sind herzlich eingeladen. Die Spenden gehen
+            2026 an den Du-Ich-Wir e.V. in Erkrath.
           </p>
 
           <div className="stats-grid stats-grid--three">
@@ -254,6 +255,28 @@ function App() {
                 <img src={participant.src} alt={participant.name} />
               </div>
             ))}
+          </div>
+
+          <h3 className="year-2025-subheading">Wer profitiert</h3>
+          <div className="join-card beneficiary-card">
+            <img
+              src={duIchWirLogo}
+              alt="Du-Ich-Wir e.V. Logo"
+              className="join-card-logo join-card-logo--beneficiary"
+            />
+            <p>
+              Die Spenden aus der Aktion 2026 gehen an den Du-Ich-Wir e.V.
+              – einen gemeinnützigen Verein, der Kindern und Jugendlichen
+              Zugang zu bestmöglicher Bildung verschafft.
+            </p>
+            <p className="join-card-address">
+              Willbecker Straße 87 · 40699 Erkrath
+            </p>
+            <div className="contact-details">
+              <a href="https://du-ich-wir.org/" target="_blank" rel="noreferrer">
+                du-ich-wir.org
+              </a>
+            </div>
           </div>
 
           <p className="join-cta">Wer mitmachen möchte, meldet sich bei:</p>

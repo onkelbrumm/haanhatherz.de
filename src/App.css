@@ -228,6 +228,16 @@
   max-width: 360px;
 }
 
+.join-card-logo--beneficiary {
+  height: 140px;
+  max-width: 280px;
+}
+
+.beneficiary-card {
+  max-width: 560px;
+  margin: 0 auto 8px;
+}
+
 .join-card p {
   color: var(--text-muted);
   font-size: 15px;
