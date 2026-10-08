@@ -8,28 +8,39 @@ import dolceCuoreLogo from './assets/dolcecuore-logo.svg'
 import gartenstadtHaanLogo from './assets/gartenstadt-haan-logo.png'
 import './App.css'
 
-const participantModules = import.meta.glob(
-  './assets/participants/*.{png,svg}',
-  {
-    eager: true,
-    import: 'default',
-  },
-)
-
-const PARTICIPANTS = Object.entries(participantModules)
-  .map(([path, src]) => {
-    const fileName = path.split('/').pop().replace(/\.(png|svg)$/, '')
+const toParticipants = (modules) =>
+  Object.entries(modules).map(([path, src]) => {
+    const fileName = path.split('/').pop().replace(/\.(png|jpe?g|svg)$/, '')
     const name = fileName
       .split('_')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
     return { name, src }
   })
-  .sort((a, b) => a.name.localeCompare(b.name))
 
-const PARTICIPANTS_2026 = PARTICIPANTS.filter((participant) =>
-  ['4hoki', 'Dolce Cuore'].includes(participant.name),
-)
+const byName = (a, b) => a.name.localeCompare(b.name)
+
+const PARTICIPANTS = toParticipants(
+  import.meta.glob('./assets/participants/*.{png,svg}', {
+    eager: true,
+    import: 'default',
+  }),
+).sort(byName)
+
+// 2026: Logos, die schon 2025 dabei waren, kommen aus PARTICIPANTS;
+// neue bzw. aktualisierte Logos liegen in assets/participants-2026/.
+const PARTICIPANTS_2026 = [
+  ...PARTICIPANTS.filter(
+    (participant) =>
+      ['4hoki', 'Dolce Cuore'].includes(participant.name),
+  ),
+  ...toParticipants(
+    import.meta.glob('./assets/participants-2026/*.{png,jpg,jpeg,svg}', {
+      eager: true,
+      import: 'default',
+    }),
+  ),
+].sort(byName)
 
 const NAV_LINKS = [
   { href: '#2026', label: '2026' },
