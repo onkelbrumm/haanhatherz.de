@@ -32,7 +32,7 @@ const PARTICIPANTS = toParticipants(
 const PARTICIPANTS_2026 = [
   ...PARTICIPANTS.filter(
     (participant) =>
-      ['4hoki', 'Dolce Cuore'].includes(participant.name),
+      ['4hoki', 'Dolce Cuore', 'Supernah'].includes(participant.name),
   ),
   ...toParticipants(
     import.meta.glob('./assets/participants-2026/*.{png,jpg,jpeg,svg}', {
