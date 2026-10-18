@@ -53,6 +53,7 @@ const PARTICIPANT_LINKS = {
   'Hautnah Erleben': 'https://www.schoen-in-haan.de/',
   'Ostermann': 'https://www.ostermann.de/',
   'Raumausstatter Queen': 'https://raumausstatterqueen.de/',
+  'Reformhaus': 'https://www.reformhaus.de',
   "Suki's Boutique": 'https://www.sukis.de/',
   'Supernah': 'https://supernah.de/',
   'Whirlpool': 'https://whirlpoolhaan.de/',
