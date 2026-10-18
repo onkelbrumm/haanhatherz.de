@@ -43,6 +43,21 @@ const PARTICIPANTS_2026 = [
   ),
 ].sort(byName)
 
+// Webseiten der Teilnehmenden 2026 (Schlüssel = Name aus dem Logo-Dateinamen)
+const PARTICIPANT_LINKS = {
+  '4hoki': 'https://www.4hoki.de/',
+  'Dolce Cuore': 'https://www.dolcecuore.de',
+  'Dorfmädchen': 'https://dorfmaedchen-gruiten.de/HOME',
+  'Emma': 'https://www.emma-secondhand.de',
+  'Haaner Teeladen': 'https://haanerteeladen.de/',
+  'Hautnah Erleben': 'https://www.schoen-in-haan.de/',
+  'Ostermann': 'https://www.ostermann.de/',
+  'Raumausstatter Queen': 'https://raumausstatterqueen.de/',
+  "Suki's Boutique": 'https://www.sukis.de/',
+  'Supernah': 'https://supernah.de/',
+  'Whirlpool': 'https://whirlpoolhaan.de/',
+}
+
 const NAV_LINKS = [
   { href: '#2026', label: '2026' },
   { href: '#2025', label: '2025' },
@@ -250,11 +265,25 @@ function App() {
             Diese Geschäfte sind 2026 bereits dabei.
           </p>
           <div className="participants-grid participants-grid--current">
-            {PARTICIPANTS_2026.map((participant) => (
-              <div key={participant.name} className="participant-card">
-                <img src={participant.src} alt={participant.name} />
-              </div>
-            ))}
+            {PARTICIPANTS_2026.map((participant) => {
+              const url = PARTICIPANT_LINKS[participant.name]
+              const logo = <img src={participant.src} alt={participant.name} />
+              return url ? (
+                <a
+                  key={participant.name}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="participant-card participant-card--link"
+                >
+                  {logo}
+                </a>
+              ) : (
+                <div key={participant.name} className="participant-card">
+                  {logo}
+                </div>
+              )
+            })}
           </div>
 
           <h3 className="year-2025-subheading">Wer profitiert</h3>
