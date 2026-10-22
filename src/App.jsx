@@ -54,6 +54,7 @@ const PARTICIPANT_LINKS = {
   'Ostermann': 'https://www.ostermann.de/',
   'Raumausstatter Queen': 'https://raumausstatterqueen.de/',
   'Reformhaus': 'https://www.reformhaus.de',
+  'Sonnenglück': 'https://www.bioladen-sonnenglueck.de',
   "Suki's Boutique": 'https://www.sukis.de/',
   'Supernah': 'https://supernah.de/',
   'Whirlpool': 'https://whirlpoolhaan.de/',
