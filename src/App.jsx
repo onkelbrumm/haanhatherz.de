@@ -51,6 +51,7 @@ const PARTICIPANT_LINKS = {
   'Emma': 'https://www.emma-secondhand.de',
   'Haaner Teeladen': 'https://haanerteeladen.de/',
   'Hautnah Erleben': 'https://www.schoen-in-haan.de/',
+  'M-Quadrat Immobilien': 'https://m-quadrat-immobilien.de/immobilien-makler-haan/',
   'Ostermann': 'https://www.ostermann.de/',
   'Raumausstatter Queen': 'https://raumausstatterqueen.de/',
   'Reformhaus': 'https://www.reformhaus.de',
