@@ -33,7 +33,7 @@ const PARTICIPANTS = toParticipants(
 const PARTICIPANTS_2026 = [
   ...PARTICIPANTS.filter(
     (participant) =>
-      ['4hoki', 'Dolce Cuore', 'Hautnah Erleben', 'Ostermann', 'Reformhaus', 'Supernah', 'Whirlpool'].includes(participant.name),
+      ['4hoki', 'Dolce Cuore', 'Hautnah Erleben', 'Ostermann', 'Reformhaus', 'Supernah', 'Whirlpool', 'Wollehaus'].includes(participant.name),
   ),
   ...toParticipants(
     import.meta.glob('./assets/participants-2026/*.{png,jpg,jpeg,svg}', {
@@ -59,6 +59,7 @@ const PARTICIPANT_LINKS = {
   "Suki's Boutique": 'https://www.sukis.de/',
   'Supernah': 'https://supernah.de/',
   'Whirlpool': 'https://whirlpoolhaan.de/',
+  'Wollehaus': 'https://wollehaus.de',
 }
 
 const NAV_LINKS = [
