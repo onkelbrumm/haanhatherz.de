@@ -6,6 +6,7 @@ import kipkelLogo from './assets/kipkel-logo.png'
 import buergerstiftungLogo from './assets/buergerstiftung-logo.png'
 import dolceCuoreLogo from './assets/dolcecuore-logo.svg'
 import duIchWirLogo from './assets/du-ich-wir-logo.png'
+import plakat2026 from './assets/plakat-2026.jpg'
 import gartenstadtHaanLogo from './assets/gartenstadt-haan-logo.png'
 import './App.css'
 
@@ -248,6 +249,16 @@ function App() {
             mitmachen möchten, sind herzlich eingeladen. Die Spenden gehen
             2026 an den Du-Ich-Wir e.V. in Erkrath.
           </p>
+
+          <figure className="poster">
+            <a href={plakat2026} target="_blank" rel="noopener noreferrer">
+              <img
+                src={plakat2026}
+                alt="Plakat zur Aktion: Gemeinschaft stärken! Am 27.11.26 spenden Haaner Einzelhändler einen Teil ihres Umsatzes an Du-Ich-Wir e.V."
+              />
+            </a>
+            <figcaption>Plakat anklicken, um es groß zu öffnen.</figcaption>
+          </figure>
 
           <div className="stats-grid stats-grid--three">
             <div className="stat-card">
