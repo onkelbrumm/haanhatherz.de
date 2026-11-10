@@ -48,6 +48,7 @@ const PARTICIPANTS_2026 = [
 const PARTICIPANT_LINKS = {
   '4hoki': 'https://www.4hoki.de/',
   'Dolce Cuore': 'https://www.dolcecuore.de',
+  'Dormavita': 'https://www.dormavita.de/',
   'Dorfmädchen': 'https://dorfmaedchen-gruiten.de/HOME',
   'Emma': 'https://www.emma-secondhand.de',
   'Haaner Teeladen': 'https://haanerteeladen.de/',
