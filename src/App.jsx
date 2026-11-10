@@ -47,6 +47,7 @@ const PARTICIPANTS_2026 = [
 // Webseiten der Teilnehmenden 2026 (Schlüssel = Name aus dem Logo-Dateinamen)
 const PARTICIPANT_LINKS = {
   '4hoki': 'https://www.4hoki.de/',
+  'Augenweide': 'https://www.augenweide-gruiten.de',
   'Dolce Cuore': 'https://www.dolcecuore.de',
   'Dormavita': 'https://www.dormavita.de/',
   'Dorfmädchen': 'https://dorfmaedchen-gruiten.de/HOME',
