@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badge für Händler – Haan hat Herz</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    @font-face { font-family: 'Shadows Into Light Two'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/ShadowsIntoLightTwo-Regular.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('fonts/Inter-Variable.woff2') format('woff2'); }
+
+    :root {
+      --red: #e20201;
+      --red-line: #ae0101;
+      --red-tint: #fdecec;
+      --text: #2b2624;
+      --text-muted: #6b6461;
+      --white: #ffffff;
+      --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+      --heading: 'Shadows Into Light Two', cursive;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font: 16px/1.6 var(--sans);
+      color: var(--text);
+      background: var(--white);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 16px 80px;
+    }
+
+    h1 {
+      font: 400 clamp(34px, 6vw, 48px)/1.15 var(--heading);
+      margin: 0 0 16px;
+      text-align: center;
+    }
+
+    h2 {
+      font: 400 28px/1.2 var(--heading);
+      margin: 48px 0 12px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--text-muted);
+      margin: 0 auto 40px;
+      max-width: 52ch;
+    }
+
+    .preview {
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+      border: 1px solid var(--red-tint);
+      border-radius: 12px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin: 24px 0 12px;
+    }
+
+    label { font-weight: 500; }
+
+    select {
+      font: inherit;
+      padding: 8px 12px;
+      border: 1px solid var(--red-line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 14px;
+      font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      border: 1px solid var(--red-tint);
+      border-radius: 8px;
+      background: #faf7f6;
+      color: var(--text);
+      resize: vertical;
+    }
+
+    button, .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 22px;
+      font: 600 15px var(--sans);
+      color: var(--white);
+      background: var(--red-line);
+      border: 0;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover, .button:hover { background: var(--red); }
+
+    .hint { color: var(--text-muted); font-size: 14px; margin: 8px 0 0; }
+
+    ol { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+
+    .back { display: block; text-align: center; margin-top: 56px; color: var(--red-line); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Wir sind dabei!</h1>
+  <p class="lead">
+    Zeigen Sie auf Ihrer Website, dass Ihr Geschäft bei „Haan hat Herz“ mitmacht.
+    Das Badge verlinkt direkt auf haanhatherz.de.
+  </p>
+
+  <div class="preview">
+    <img id="preview" src="wir-sind-dabei.png" width="160" height="160"
+         alt="Haan hat Herz – Spenden statt Rabatte! Wir sind dabei!" />
+  </div>
+
+  <h2>1. Größe wählen</h2>
+  <div class="controls">
+    <label for="size">Breite des Badges:</label>
+    <select id="size">
+      <option value="120">klein (120 px)</option>
+      <option value="160" selected>mittel (160 px)</option>
+      <option value="200">groß (200 px)</option>
+    </select>
+  </div>
+
+  <h2>2. Code kopieren</h2>
+  <p class="hint" style="margin-bottom:10px">
+    Variante A lädt das Badge direkt von haanhatherz.de und bleibt dadurch immer aktuell.
+  </p>
+  <textarea id="code" readonly spellcheck="false"></textarea>
+  <button type="button" id="copy">Code kopieren</button>
+  <span class="hint" id="copied" role="status" aria-live="polite"></span>
+
+  <h2>3. In die Website einfügen</h2>
+  <ol>
+    <li>Öffnen Sie Ihre Website im Bearbeitungsmodus (bei Baukästen wie Wix, Jimdo, Squarespace oder WordPress meist ein „HTML“- oder „Code“-Element).</li>
+    <li>Fügen Sie den kopierten Code an der gewünschten Stelle ein, zum Beispiel in der Fußzeile oder auf der Startseite.</li>
+    <li>Speichern und veröffentlichen Sie die Seite. Fertig.</li>
+  </ol>
+
+  <h2>Variante B: Badge selbst hosten</h2>
+  <p>
+    Wenn Sie das Bild lieber auf Ihrem eigenen Server ablegen möchten, laden Sie es herunter,
+    laden Sie es zu Ihrer Website hoch und tragen Sie bei <code>src</code> dessen Adresse ein.
+  </p>
+  <a class="button" href="wir-sind-dabei.png" download>Badge herunterladen (PNG)</a>
+
+  <a class="back" href="/">← Zurück zu haanhatherz.de</a>
+</main>
+
+<script>
+  (function () {
+    var size = document.getElementById('size');
+    var code = document.getElementById('code');
+    var preview = document.getElementById('preview');
+    var copied = document.getElementById('copied');
+    var TEXT = 'Haan hat Herz – Spenden statt Rabatte! Wir sind dabei!';
+
+    function build() {
+      var s = size.value;
+      return '<a href="https://www.haanhatherz.de" target="_blank" rel="noopener" title="' + TEXT + '">' +
+        '<img src="https://www.haanhatherz.de/badge/wir-sind-dabei.png" alt="' + TEXT + '" ' +
+        'width="' + s + '" height="' + s + '" style="border:0;max-width:100%;height:auto"></a>';
+    }
+
+    function update() {
+      code.value = build();
+      preview.width = preview.height = size.value;
+      copied.textContent = '';
+    }
+
+    size.addEventListener('change', update);
+    document.getElementById('copy').addEventListener('click', function () {
+      code.select();
+      var done = function () { copied.textContent = ' Kopiert!'; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code.value).then(done, function () { document.execCommand('copy'); done(); });
+      } else {
+        document.execCommand('copy');
+        done();
+      }
+    });
+    update();
+  })();
+</script>
+</body>
+</html>
