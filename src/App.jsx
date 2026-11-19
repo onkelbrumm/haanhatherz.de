@@ -53,6 +53,7 @@ const PARTICIPANT_LINKS = {
   'Dormavita': 'https://www.dormavita.de/',
   'Dorfmädchen': 'https://dorfmaedchen-gruiten.de/HOME',
   'Emma': 'https://www.emma-secondhand.de',
+  'Foto Meyerhenke': 'https://www.foto-meyerhenke.com',
   'Haaner Teeladen': 'https://haanerteeladen.de/',
   'Hautnah Erleben': 'https://www.schoen-in-haan.de/',
   'M-Quadrat Immobilien': 'https://m-quadrat-immobilien.de/immobilien-makler-haan/',
